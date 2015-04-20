@@ -142,43 +142,7 @@ public class MainActivity extends Activity {
 			BA.disable();
 	}
 
-	public class displayAdapter extends BaseAdapter {
-		private ArrayList<String> list;
+	
 
-		public displayAdapter(ArrayList<String> input) {
-			this.list = input;
-		}
-
-		@Override
-		public int getCount() {
-			// TODO Auto-generated method stub
-			return list.size();
-		}
-
-		@Override
-		public Object getItem(int arg0) {
-			// TODO Auto-generated method stub
-			return list.get(arg0);
-		}
-
-		@Override
-		public long getItemId(int position) {
-			// TODO Auto-generated method stub
-			return position;
-		}
-
-		@Override
-		public View getView(int position, View view, ViewGroup parent) {
-			if (view == null) {
-				LayoutInflater inflater = LayoutInflater.from(parent
-						.getContext());
-				view = inflater.inflate(R.layout.display, parent, false);
-			}
-
-			TextView tv = (TextView) view.findViewById(R.id.nameText);
-			tv.setText(list.get(position));
-			return null;
-		}
-
-	}
+	
 }
